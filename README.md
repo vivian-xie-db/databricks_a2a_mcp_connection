@@ -20,17 +20,7 @@ This project demonstrates how the Model Context Protocol (MCP) and the Agent-to-
 
 ## Example Flow
 
-```mermaid
-flowchart TD
-    subgraph Discovery
-        A1[Agent A] -- "Query MCP" --> MCP["MCP Server"]
-        MCP -- "Returns Genie Agent Card" --> A1
-    end
-    subgraph Communication
-        A1 -- "A2A Protocol" --> G["Genie Agent"]
-        G -- "A2A Response" --> A1
-    end
-```
+![](./a2a_mcp.png)
 
 - **MCP**: Central registry for all agents/tools.
 - **A2A**: Standard protocol for agent-to-agent communication after discovery.
