@@ -1,13 +1,13 @@
-# Connecting MCP (Discovery) and A2A (Agent-to-Agent Communication)
+# Connecting MCP (Discovery) and A2A (Agent2Agent Communication)
 
 ## Overview
 
-This project demonstrates how the Model Context Protocol (MCP) and the Agent-to-Agent (A2A) protocol work together to enable a dynamic, extensible agent ecosystem. The Genie Agent is registered as a discoverable resource on the MCP server. Any agent (not just end users) can use MCP to discover the Genie Agent, then use the A2A protocol to interact with it in a standardized way.
+This project demonstrates how the Model Context Protocol (MCP) and the Agent2Agent (A2A) protocol work together to enable a dynamic, extensible agent ecosystem. The Genie Agent is registered as a discoverable resource on the MCP server. Any agent (not just end users) can use MCP to discover the Genie Agent, then use the A2A protocol to interact with it in a standardized way.
 
 ## Key Concepts
 
 - **MCP (Model Context Protocol)**: Acts as a centralized registry for all discoverable agents, tools, and resources. Any agent or client can query the MCP server to find available resources and retrieve their metadata (Agent Cards).
-- **A2A (Agent-to-Agent Protocol)**: Defines the standard for how agents communicate with each other at runtime. Once an agent discovers another agent (like Genie) via MCP, it uses A2A to send tasks, receive results, and coordinate workflows.
+- **A2A (Agent2Agent Protocol)**: Defines the standard for how agents communicate with each other at runtime. Once an agent discovers another agent (like Genie) via MCP, it uses A2A to send tasks, receive results, and coordinate workflows.
 
 ## How MCP and A2A Work Together
 
