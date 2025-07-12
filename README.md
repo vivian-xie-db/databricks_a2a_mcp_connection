@@ -25,12 +25,12 @@ This project demonstrates how the Model Context Protocol (MCP) and the Agent2Age
 - **Remote Agents (A, B, ...)**
   - Each remote agent runs as an A2A server, typically on Databricks Apps.
   - Each agent is accessible via the A2A protocol.
-  - Each agent has access to a Databricks MCP server, which they use for specific tool calls or data processing.
+  - Each agent has access to a Databricks MCP server, which they use for specific tool calls or data processing,for example, genie space.
 
 **Technical Flow:**
 - The orchestrator agent uses the A2A protocol to discover and communicate with each remote agent.
 - Remote agents expose endpoints via the A2A protocol.
-- Each remote agent can make calls to its own Databricks MCP server to execute workloads or fetch data.
+- Each remote agent can make calls to its own Databricks MCP server to execute workloads or fetch data, for example, genie space.
 
 ![](./a2a-mcp.png)
 
