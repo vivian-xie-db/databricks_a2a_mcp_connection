@@ -20,8 +20,11 @@ from mcp.client.streamable_http import streamablehttp_client
 
 LLM_ENDPOINT_NAME = "databricks-claude-3-7-sonnet"
 SYSTEM_PROMPT = "You are a helpful assistant."
-DATABRICKS_CLI_PROFILE = "e2-demo-field-eng"
-workspace_client = WorkspaceClient(profile=DATABRICKS_CLI_PROFILE)
+
+# No need profile in Databricks Apps, need the profile in Databricks CLI
+# DATABRICKS_CLI_PROFILE = "e2-demo-field-eng"
+# workspace_client = WorkspaceClient(profile=DATABRICKS_CLI_PROFILE)
+workspace_client = WorkspaceClient()
 host = workspace_client.config.host
 MCP_SERVER_URLS = [
     f"{host}/api/2.0/mcp/genie/01f058258b7c1139953d7d6646c0b048"
@@ -154,7 +157,7 @@ class SingleTurnMCPAgent(ResponsesAgent):
         )
 
     def predict(self, request: ResponsesAgentRequest) -> ResponsesAgentResponse:
-        ws = WorkspaceClient(profile=DATABRICKS_CLI_PROFILE)
+        ws = WorkspaceClient()
 
         # 1) build initial history: system + user
         history: List[dict] = [{"role": "system", "content": SYSTEM_PROMPT}]

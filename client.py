@@ -15,29 +15,12 @@ import json
 config = Config(profile="e2-demo-field-eng")
 token = config.oauth_token().access_token
 
-# url = "https://genie-vivian-1444828305810485.aws.databricksapps.com/api/mcp/"
-# transport = StreamableHttpTransport(
-#     url=url,
-#     headers=headers
-# )
-# client = Client(transport)
 async def main():
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)  # Get a logger instance
 
-#     async with client:
-#         print("list resources")
-#         result = await client.list_resources()
-#         logger.info(result)
-#         response = await client.read_resource("resource://agent_cards/genie_supply_chain_agent")
-#         data = json.loads(response[0].text)
-#         agent_card = AgentCard(**data)
-#         print(agent_card)
-       
-    base_url = 'https://a2a-server-1444828305810485.aws.databricksapps.com/api'
+    base_url = 'https://a2a-server-your-app-name.aws.databricksapps.com/api'
     
-    
-    #base_url = "http://localhost:8000/api"
     async with httpx.AsyncClient(timeout=100) as httpx_client:
         # Initialize A2ACardResolver
         resolver = A2ACardResolver(
