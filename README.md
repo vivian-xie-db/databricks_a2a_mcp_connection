@@ -60,6 +60,8 @@ When you run it in local IDE, make sure to set up the Databricks Oauth u2m profi
 
 `config = Config(profile="Your profile name")`
 
+Replace the base_url `https://a2a-server-your-app-name.aws.databricksapps.com/api` with the a2a server url deployed on Databricks apps.
+
 Running the code and you will get back a response, after executing the Databricks genie MCP tool on a A2A server.
 ```
 $ python3 client.py
