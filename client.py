@@ -12,14 +12,14 @@ from fastmcp.client.transports import StreamableHttpTransport
 import asyncio
 from databricks.sdk.core import Config
 import json
-config = Config(profile="e2-demo-field-eng")
+config = Config(profile="Oauth")
 token = config.oauth_token().access_token
 
 async def main():
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)  # Get a logger instance
 
-    base_url = 'https://a2a-server-your-app-name.aws.databricksapps.com/api'
+    base_url = 'https://databricks-a2a-mcp-1444828305810485.aws.databricksapps.com/api'
     
     async with httpx.AsyncClient(timeout=100) as httpx_client:
         # Initialize A2ACardResolver
